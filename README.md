@@ -41,7 +41,7 @@ Supports both regular and quiz-type polls, stores responses in SQLite, and allow
 2. **Add your bot** to the target Telegram channel and promote it to **Admin**.  
 3. **Clone this repo** and install dependencies:
    ```bash
-   git clone https://github.com/<your-username>/tg-channel-quiz-manager.git
+   git clone https://github.com/itsravihansda/tg-channel-quiz-manager.git
    cd tg-channel-quiz-manager
    python -m venv .venv
    source .venv/bin/activate   # Windows: .venv\Scripts\activate
@@ -86,19 +86,19 @@ The bot will initialize the database (`quizbot.db`) and start polling.
 Minimum fields:
 ```json
 {
-  "question": "कवि रामधारी सिंह ‘दिनकर’ की दृष्टि में ज्ञान के देवता कहाँ मिलते हैं?",
-  "options": ["खेड़–खेलाड़ियों में", "तपस्वियों में", "राजाओं में", "दार्शनिकों में"]
-}
+    "question": "What is the national animal of India?",
+    "options": ["Elephant", "Tiger", "Lion", "Rhinoceros"],
+    "correct_option": 1,
+    "is_anonymous": true
+  }
 ```
 
 Optional fields:
 ```json
 {
-  "correct_option": 1,
-  "is_anonymous": false,
   "allows_multiple_answers": false,
   "open_period": 60,
-  "explanation": "दिनकर के अनुसार यह उत्तर सही है।",
+  "explanation": "The Tiger is the national animal of India.",
   "parse_mode": "HTML"
 }
 ```
@@ -182,7 +182,7 @@ CMD ["python", "quiz_channel_bot.py"]
 
 ## 📄 License
 
-MIT License © 2025 — Your Name
+MIT License © 2025 — Ravi Hansda
 
 ---
 
